@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <title>DL</title>
+</head>
+<body>
+    <main id="container">
+        <form id="login-form">
+            <div id="form-header">
+                <h1>Login</h1>
+                <i class="fa-regular fa-moon" id="mode-icon"></i>
+            </div>
+
+            <div id="social-media">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-google"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+            </div>
+
+            <div id="inputs">
+                <div class="input-box">
+                    <label for="nome">
+                        Name
+                        <div class="input-field">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" name="name" id="name">
+                        </div>
+                    </label>
+                </div>
+                <div class="input-box">
+                    <label for="email">
+                        E-mail
+                        <div class="input-field">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" name="email" id="email">
+                        </div>
+                    </label>
+                </div>
+                <div class="input-box">
+                    <label for="senha">
+                        Senha
+                        <div class="input-field">
+                            <i class="fa-solid fa-key"></i>
+                            <input type="password" name="senha" id="senha">
+                        </div>
+                    </label>
+                    <div id="forgot-password">
+                        <a href="#">
+                            Esqueceu sua senha?
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" id="login-button">
+                Login
+            </button>
+        </form>
+    </main>
+</body>
+<script src="https://kit.fontawesome.com/8837169d94.js" crossorigin="anonymous"></script>
+<script src="/assets/js/index.js"></script>
+</html>

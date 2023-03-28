@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+
+:root{
+    --color-light-50:#f8fafc ;
+    --color-light-100:#bbadad;
+
+    --color-day-50:#4169E1;
+    
+    --color-dark-50:#797984 ;
+    --color-dark-100: #312d37;
+    --color-dark-900: #000;
+}
+
+*{
+    font-family: 'Roboto Mono', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    height: 100vh;
+    width: 100%;
+    background: url(/assets/img/sol.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#login-form{
+    background: var(--color-light-50);
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    border-radius: 8px;
+    gap: 30px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.336);
+    height: fit-content;
+    animation: dark-to-light .5s ease-in-out;
+}
+
+#form-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#form-header h1{
+    font-size: 40px;
+    position: relative;
+}
+
+#form-header h1::before{
+    position: absolute;
+    content: '';
+    width: 40%;
+    background-color: var(--color-day-50);
+    height: 3px;
+    bottom: 6px;
+    border-radius: 5px;
+}
+
+#mode-icon{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#social-media{
+    display: flex;
+    justify-content: space-around;
+}
+
+.fa-facebook{
+    color: #3b5998;
+    transition: .2s;
+}
+
+.fa-facebook:hover{
+    color: #334d85;
+    transform: scale(1.1);
+}
+
+.fa-google{
+    color: #db4a39;
+    transition: .2s;
+}
+
+.fa-google:hover{
+    color: #cf3b2b;
+    transform: scale(1.1);
+}
+
+.fa-github{
+    color: #171515;
+    transition: .2s;
+}
+
+.fa-github:hover{
+    color: #0a0909;
+    transform: scale(1.1);
+}
+
+#social-media i {
+    font-size: 35px;
+}
+
+#inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.input-box label{
+    font-size: 14px;
+    color: var(--color-dark-50);
+}
+
+.input-field{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 3px;
+    cursor: text;
+    border-bottom: 1px solid var(--color-day-50);
+}
+
+.input-field i {
+    font-size: 18px;
+    color: var(--color-dark-900);
+}
+
+.input-field input{
+    border: none;
+    background-color: transparent;
+    width: 260px;
+    font-size: 18px;
+    padding: 0px 5px;
+}
+
+.input-field input:focus{
+    outline: none;
+}
+
+#forgot-password a{
+    text-decoration: none;
+    font-size: 12px;
+    color: var(--color-dark-50);
+}
+
+#forgot-password a:hover{
+    color: var(--color-day-50);
+}
+
+#login-button{
+    border: none;
+    background-color: var(--color-day-50);
+    color: var(--color-light-50);
+    padding: 7px;
+    font-size: 18px;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#login-button:hover{
+    transform: scale(1.05);
+}
+
+/* dark */
+
+.dark#container{
+    background: url(/assets/img/lua.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.dark#login-form{
+    color: var(--color-light-50);
+    background-color: transparent;
+    border: 1px solid var(--color-dark-50);
+    backdrop-filter: blur(20px);
+    animation: light-to-dark .5s ease-in-out;
+}
+
+.dark#login-form #form-header h1::before{
+    background-color: var(--color-dark-100);
+}
+
+.dark#login-form .fa-facebook {
+    color: #FFF;
+    transition: .2s;
+}
+
+.dark#login-form .fa-facebook:hover {
+    color: #FFF;
+    transform: scale(1.1);
+}
+
+.dark#login-form .fa-google {
+    color: #FFF;
+    transition: .2s;
+}
+
+.dark#login-form .fa-google:hover {
+    color: #FFF;
+    transform: scale(1.1);
+}
+
+.dark#login-form .fa-github {
+    color: #FFF;
+    transition: .2s;
+}
+
+.dark#login-form .fa-github:hover {
+    color: #FFF;
+    transform: scale(1.1);
+}
+
+.dark#login-form .input-field input,
+.dark#login-form .input-field i,
+.dark#login-form .input-box label{
+    color: var(--color-light-50);
+}
+
+.dark#login-form .input-field{
+    border-bottom: 1px solid var(--color-light-50);
+}
+
+.dark#login-form #forgot-password a{
+    color: var(--color-light-50);
+    transition: .2s;
+}
+
+.dark#login-form #forgot-password a:hover{
+    color: var(--color-light-100);
+}
+
+.dark#login-form #login-button{
+    background-color: var(--color-dark-100);
+}
+
+/* animação back para light */
+
+@keyframes dark-to-light{
+    0%{
+        background-color: transparent;
+    }  
+    
+    100%{
+        background-color: var(--color-light-50);
+    }
+}
+
+@keyframes light-to-dark {
+    0% {
+        background-color: var(--color-light-50);
+    }
+
+    100% {
+        background-color: transparent;
+    }
+}
